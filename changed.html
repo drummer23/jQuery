@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("table td:nth-child(3) input").change(function(){
+        $(this).parent().prev().html("ch").css('color','red');
+      });
+    });
+
+  </script>
+</head>
+<body>
+  <table>
+    <tr><td>Feld </td><td>Status</td><td>Eingabe </td></tr>
+    <tr><td>Vorname </td><td>ok </td><td><input type='text' /></td></tr>
+    <tr><td>Nachname</td><td>ok </td><td><input type='text' /></td></tr>
+    <tr><td>PLZ </td><td>ok </td><td><input type='text' /></td></tr>
+    <tr><td>Ort </td><td>ok </td><td><input type='text' /></td></tr>
+    <tr><td>Beruf </td><td>ok </td><td><input type='text' /></td></tr>
+  </table>
+</body>
+</html>
