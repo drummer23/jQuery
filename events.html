@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+
+  <!-- Custom -->
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("button").click(function() {
+        $("p").css('color','red');
+      });
+    });
+  </script>
+
+</head>
+<body>
+
+<div class="well">This Example shows the difference between binding an event handler to the "click" JavaScript event and trigger that event on an element.
+after 5 seconds, the click on the button is triggered, which has an event handler that turns text red</div>
+
+  <h2>This is a heading</h2>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <button>Click me</button>
+
+  <script type="text/javascript">
+    setTimeout( function() {
+      $("button").click();
+    },5000);
+
+
+  </script>
+</body>
+</html>
