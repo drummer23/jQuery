@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+
+<p>This example binds an event handler to the click of the link. The click is autotriggered</p>
+
+<a href="http://jquery.com/">jQuery</a>
+<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+<script>
+
+	$(document).ready(function () {
+
+		//data to pass to the event handler
+		var userName = 'roger';
+
+		//Bind an event handler
+		$("a").click(userName, function (event) {
+			alert("Thanks for visiting " + event.data);
+			event.preventDefault();
+		});
+
+		// Triggers the Event
+		$("a").click();
+
+	});
+
+</script>
+</body>
+</html>
