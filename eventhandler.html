@@ -20,6 +20,8 @@
 		//Bind an event handler
 		$("a").click(userName, function (event) {
 			alert("Thanks for visiting " + event.data);
+
+			//prevent link from opening
 			event.preventDefault();
 		});
 
